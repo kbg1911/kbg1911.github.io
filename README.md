@@ -22,7 +22,7 @@
 ---
 - asdf
 
-```
+```c
 #include<iostream.h>
 printf("helloWorld~!!)
 ```
@@ -34,10 +34,7 @@ printf("helloWorld~!!)
 
 # 김치
 
-> 하하하
-
-
+``` c
     #include<iostream.h>
     printf("helloWorld~!!)
-
-ㅁ
+```
