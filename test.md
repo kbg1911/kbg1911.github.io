@@ -25,6 +25,9 @@
 
 - css에 white-space 설정을 추천
 
+
+
+
 ### white-space:
 - normal : 기본값. 여러공백 하나, \n은 무시 긴행은 warp
 - nowarp : nomal 속성 + 긴행은 warp 안됨
