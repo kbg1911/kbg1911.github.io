@@ -4,12 +4,14 @@
 ``` javascript
 <a href="javascript:history.back()">Back</a>
 ```
+---
 
 ## HTML Span 넓이 지정
 
 ``` html
 <span style="display: inline-block; width: 250px;">No</span>
 ```
+---
 
 ## TextArea 줄바꿈 살리기
 
@@ -24,9 +26,7 @@
 ```
 
 - css에 white-space 설정을 추천
-
-
-
+---
 
 ### white-space:
 - normal : 기본값. 여러공백 하나, \n은 무시 긴행은 warp
@@ -34,5 +34,77 @@
 - pre : 여러공백, 개행문자 표현, warp 되지않음
 - pre-line : 여러개의 공백은 하나로 표시, 긴행은 필요시 warp, 개행문자 O
 - pre-warp : 여러개 공백과 개행문자, 필요시 warp 까지가능
-
 - [참고](https://offbyone.tistory.com/326)
+
+# GitHub
+
+### 용어정리
+
+- Git : 분산 버전 관리 시스템
+- GitHub : 대표적인 Git 저장소
+- GitHubDesktop : Graphic 기반의 Git Software
+- Push : 원격저장소로 Upload
+- Pull : Download
+- Commit : 로컬저장소에 Upload
+- Fetch : 아마 로컬저장소에 Download
+- Merge : Master작업라인을 로컬로 저장 및 합체
+
+### Master
+
+- 각 브런치를 적용 및 메인 작업 라인
+
+### Branch
+
+- 브런치는 각 개발자들의 병렬작업을 위한 서브 패스
+    - ex) 기능구현 Branch, 버그수정 Branch, 통신개발 Branch
+    - 각 모듈이 완성될때 병합(Merge to master)
+    - 여러사람이 독립적으로 개발이 가능
+    - 작업기록이 남기에 문제 발생시 찾아내기 수월함
+
+### PullRequest
+
+- Branch 에서 작업 완료 및 중간 작업 소스 통합 요청
+- Merge 되기전 서버데이터 변경 X
+- 해당 Branch 단에서 Commit 및 수정 가능
+- 즉 병합 적용전의 내부버전관리 가능
+
+### 브런치 병합하기
+
+- Process A
+    - git checkout develop (브런치 선택)
+    - git merge origin/master (병합)
+    - git push origin develop (Push)
+- Process B
+    - UpdateFromMaster
+        - 선택한 Branch를 Master의 내용과 병합하는 과정
+            - (Master도 브런치임을 기억해두자)
+
+메인버전 하단에 적용기전의 여러버전 테스트 및 최종 메인버전라인에 병합가능
+
+SVN과는 다르게 또 다른 Branch단의 버전관리로 병합전 소스가 엉킬일이 없음
+
+분산버전관리가 가능
+
+### SVN과 Git의 차이
+
+- SVN : 로컬PC ↔ 원격저장소
+- Git : 로컬PC ↔ 로컬저장소 ↔ 원격저장소
+
+![GitHub%2084b738e68d614a9d9926daf8c5c7a4cd/Untitled.png](GitHub%2084b738e68d614a9d9926daf8c5c7a4cd/Untitled.png)
+
+이제 이 그림이 이해가 된다 ([출처](https://dzzienki.tistory.com/46))
+
+- 그렇다면 궁금점..? : Fetch 시점은? SVN 처럼 최신버전을 중간중간 Update해야하나? 버전업될때만 Merge 해야하나? 메인작업자의 소스는 어느시점에서 Update 해야하나?
+- 작업방식 로컬PC 작업을 Commit하여 로컬저장소에 반영후 원격저장소에서 Fetch하여 충돌이슈 없애고 Merge 한다음 Push?
+    - 그렇다면 메인작업자가 필요없이 메인작업자도 브런치로 관리가 될듯? 메인작업자도 PullRequest 때문에 필요할듯 (최종확인)
+- 브런치 담당 작업자가 중간중간 Fetch 하여 Merge로 합치고 충돌이 없을때 필요시점에 Master로 PullRequest 병합요청 ?
+
+[Unity Git 설정](GitHub%2084b738e68d614a9d9926daf8c5c7a4cd/Unity%20Git%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8C%E1%85%A5%E1%86%BC%2013af3e58c089463c8d03dbf67af2a87e.md)
+
+[Github LFS 설정(100MB 이상 업로드)](GitHub%2084b738e68d614a9d9926daf8c5c7a4cd/Github%20LFS%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8C%E1%85%A5%E1%86%BC(100MB%20%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A1%E1%86%BC%20%E1%84%8B%E1%85%A5%E1%86%B8%E1%84%85%E1%85%A9%E1%84%83%E1%85%B3)%2013838b2238104904beffff707edf458a.md)
+
+[Git Ignore 경로 설정](GitHub%2084b738e68d614a9d9926daf8c5c7a4cd/Git%20Ignore%20%E1%84%80%E1%85%A7%E1%86%BC%E1%84%85%E1%85%A9%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8C%E1%85%A5%E1%86%BC%20c9c9e4ac44d341a9a2b427fc44018a10.md) 
+
+[SmartMerge](GitHub%2084b738e68d614a9d9926daf8c5c7a4cd/SmartMerge%20db47e88d7f68430ca3b39162c39d0e77.md)
+
+[git 참고 사이트](https://backlog.com/git-tutorial/kr/)
