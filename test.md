@@ -1,23 +1,23 @@
 # HTML
 ## HTML Back 버튼 링크
 
-``` 
+``` javascript
 <a href="javascript:history.back()">Back</a>
 ```
 
 ## HTML Span 넓이 지정
 
-```
+``` html
 <span style="display: inline-block; width: 250px;">No</span>
 ```
 
 ## TextArea 줄바꿈 살리기
 
-```
+``` html
 <span style="display: inline-block; width: 250px;">No</span>
 ```
 
-```
+``` css
 .content-view {
 	white-space: pre-warp;
 }
