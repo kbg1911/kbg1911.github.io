@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="12px" viewBox="0 0 19 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Components/Icon/Back Copy</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.000000 0 0 0 0 0.000000 0 0 0 0 0.000000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+        <polygon id="path-2" points="12.668124 0 3 9.00037493 12.668124 18 14 16.6529932 5.78043673 9.00037493 14 1.34650688"></polygon>
+    </defs>
+    <g id="Library-(TBD)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Components/Icon/Back-Copy" transform="translate(0.500000, -3.500000)" filter="url(#filter-1)">
+            <g transform="translate(9.000000, 9.000000) rotate(-90.000000) translate(-9.000000, -9.000000) ">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <use id="Back" fill="#C6C4C2" xlink:href="#path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>

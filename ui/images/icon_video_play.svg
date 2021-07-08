@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="68px" height="68px" viewBox="0 0 68 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_video_play</title>
+    <g id="@Component-Style" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Overlay-video-player" transform="translate(-191.000000, -466.000000)">
+            <g id="Group" transform="translate(40.000000, 208.000000)">
+                <g id="Group" transform="translate(151.000000, 258.000000)">
+                    <circle id="Oval" stroke="#F5F5F5" fill="#FFFFFF" cx="34" cy="34" r="33.5"></circle>
+                    <path d="M36.3169679,26.6573711 L46.3870472,40.9233168 C46.7055405,41.3745157 46.5979614,41.9984745 46.1467625,42.3169679 C45.9780458,42.436062 45.776595,42.5 45.5700793,42.5 L25.4299207,42.5 C24.877636,42.5 24.4299207,42.0522847 24.4299207,41.5 C24.4299207,41.2934843 24.4938587,41.0920335 24.6129528,40.9233168 L34.6830321,26.6573711 C35.0015255,26.2061722 35.6254843,26.0985931 36.0766832,26.4170865 C36.1698999,26.4828865 36.2511679,26.5641545 36.3169679,26.6573711 Z" id="Triangle" fill="#7A7773" transform="translate(35.500000, 34.000000) rotate(90.000000) translate(-35.500000, -34.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

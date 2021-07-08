@@ -1,0 +1,638 @@
+/* 202010 */
+
+/** 텍스트 SamsungOneKorean 추가 **/
+@font-face {
+    font-family: SamsungOneKorean-400;
+    src: url('../fonts/SamsungOneKorean-400.woff2') format("woff2"), 
+	url('../fonts/SamsungOneKorean-400.woff') format("woff");
+    font-style: normal;
+}
+@font-face {
+    font-family: SamsungOneKorean-500;
+    src: url('../fonts/SamsungOneKorean-500.woff2') format("woff2"), 
+	url('../fonts/SamsungOneKorean-500.woff') format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: SamsungOneKorean-700;
+    src: url('../fonts/SamsungOneKorean-700.woff2') format("woff2"), 
+	url('../fonts/SamsungOneKorean-700.woff') format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 기본구조*/
+* {
+	margin:0; 
+	padding:0;
+}
+body {font-family: 'SamsungOneKorean-400', sans-serif; letter-spacing: 0.036rem; -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;}
+ul, ol, li {
+	list-style:none;
+}
+ul, p {
+	margin-bottom: 0;
+}
+a {
+	text-decoration:underline; 
+	color:inherit; 
+	-webkit-tap-highlight-color:transparent;
+}
+a:hover, a:focus, a:active, a:link, a:visited {
+	text-decoration:none; 
+	color:inherit;
+}
+li, p {
+	letter-spacing:0.036rem;
+    font-kerning: none;
+}
+.oneui-img {
+	width: 100%;
+	display: block;
+	border-radius: 10px;
+}
+.oneui-img.none_radius {
+	border-radius: 0;
+}
+.Samsung400 {font-family: 'SamsungOneKorean-400', sans-serif !important;}
+
+/* 텍스트 스타일*/
+.oneui-h1 {
+	font-family: 'SamsungSharpSans-Bold', 'SamsungOneKorean-700', sans-serif;
+	font-size: 50px;
+	color: #363636 !important;
+	line-height: 57px;
+	margin-bottom: 30px;
+    letter-spacing: 0;
+}
+.oneui-h2 {
+	font-family: 'SamsungSharpSans-Bold', 'SamsungOneKorean-700', sans-serif;
+	font-size: 34px;
+	color: #363636 !important;
+	line-height: 44px;
+	margin-bottom: 30px;
+    letter-spacing: 0;
+}
+.oneui-h3 {
+	font-family: 'SamsungSharpSans-Bold', 'SamsungOneKorean-700', sans-serif;
+	font-size: 22px;
+	color: #363636 !important;
+	line-height: 31px;
+	margin-bottom: 22px;
+    letter-spacing: 0;
+}
+.oneui-h4 {
+    font-family: 'SamsungOneKorean-700';
+    font-size: 18px;
+    color: #363636 !important;
+    line-height: 28px;
+	margin-bottom: 8px;
+    letter-spacing: 0.036rem;
+}
+.oneui-h4.find_more_ti {
+	margin-bottom: 0px;
+	padding-bottom:4px;
+}
+.oneui-h4.principle-h4 {margin-bottom: 0;}
+
+ul.oneui-p {
+	padding:0;
+}
+ul.oneui-p > li {
+	font-family: 'SamsungOneKorean-400';
+	font-size: 18px;
+	color: #666666 !important;
+	line-height: 28px;
+	margin-bottom: 20px;
+}
+ul.oneui-p > li:last-child {
+	margin-bottom: 0;
+}
+ul.p-imgcon.oneui-p > li:last-child {
+	margin-bottom: 30px;
+}
+.h1-h2-h3-P.oneui-h1 {
+	margin-bottom: 46px;
+}
+.h1-h2-h3-P.oneui-h2 {
+	margin-bottom: 26px;
+}
+.h1-h2-P.oneui-h1 {
+	margin-bottom: 40px;
+}
+.h1-h3-P.oneui-h1 {
+	margin-bottom: 40px;
+}
+.h2-h3.oneui-h2 {
+	margin-bottom: 26px;
+}
+.h2-h3.oneui-h3 {
+	margin-bottom: 0px;
+}
+.h2-h3-P.oneui-h2 {
+	margin-bottom: 36px;
+}
+.h2-h3-img.oneui-h2 {
+	margin-bottom: 26px;
+}
+.h2-h4-P.oneui-h2 {
+	margin-bottom: 26px;
+}
+.h3-imgcon.oneui-h3 {
+	margin-bottom: 30px;
+}
+.h4-imgcon.oneui-h4 {
+	margin-bottom: 22px;
+}
+.h1-desc {
+	font-family: 'SamsungOne400';
+	font-size: 18px;
+	color: #252525 !important;
+	line-height: 28px;
+}
+.bold {
+	font-family: 'SamsungOne700';
+	color: #252525 !important;
+}
+
+
+/* 이미지 영역 */
+.img_container {
+	width:100%; min-height:100px;
+}
+
+
+/* 정렬 */
+.col-80:after {
+	content:" "; 
+	display:block; 
+	clear:both; *zoom:1;
+}
+.col-80 > div {
+	float:left;
+}
+.col-80 > div:first-child {
+	width:80px; 
+	padding-right:20px;
+}
+.col-80 > div:last-child {
+	width:calc(100% - 80px);
+}
+
+.col-3-3-3:after {
+	content:" "; 
+	display:block; 
+	clear:both; *zoom:1;
+}
+.col-3-3-3 {
+	margin-right:-10px; 
+	margin-left:-10px;
+}
+.col-3-3-3 > div {
+	float:left; width:33.33%; 
+	padding-right:10px; 
+	padding-left:10px;
+}
+.col-1-9:after {
+	content:" "; 
+	display:block; 
+	clear:both; *zoom:1;
+}
+.col-1-9 > div {
+	float:left;
+}
+.col-1-9 > div:first-child {
+	width:12%; 
+	padding-right:20px;
+}
+.col-1-9 > div:last-child {
+	width:calc(100% - 12%);
+}
+
+.col-2-8:after {
+	content:" "; 
+	display:block; 
+	clear:both; *zoom:1;
+}
+.col-2-8 > div {
+	float:left;
+}
+.col-2-8 > div:first-child {
+	width:20%; 
+	padding-right:20px;
+}
+.col-2-8 > div:last-child {
+	width:calc(100% - 20%);
+}
+
+.col-3-7:after {
+	content:" "; 
+	display:block; 
+	clear:both; *zoom:1;
+}
+.col-3-7 > div {
+	float:left;
+}
+.col-3-7 > div:first-child {
+	width:25.658%; 
+	padding-right:20px;
+}
+.col-3-7 > div:last-child {
+	width:calc(100% - 25.658%);
+}
+.col-4-6:after {
+	content:" "; 
+	display:block; 
+	clear:both; *zoom:1;
+}
+.col-4-6 > div {
+	float:left;
+}
+.col-4-6 > div:first-child {
+	width:34.21%; 
+	padding-right:20px;
+}
+.col-4-6 > div:last-child {
+	width:calc(100% - 34.21%);
+}
+.col-5-5:after {
+	content:" "; 
+	display:block; 
+	clear:both; *zoom:1;
+}
+.col-5-5 > div {
+	float:left; width:50%;
+}
+.col-5-5 > div:first-child {
+	padding-right:10px;
+}
+.col-5-5 > div:last-child {
+	padding-left:10px;
+}
+.col-5-5.col-240 > div:first-child {
+	padding-right:10px; 
+	width:32.8948%;
+}
+.col-5-5.col-240 > div:last-child {
+	padding-left:10px; 
+	width:67.1052%;
+}
+
+
+/* 캡션 시작 */
+.cpt-t {
+	font-family: 'SamsungOneKorean-500';
+	font-size: 14px;
+	color: #666666;
+	letter-spacing: 0.02rem;
+	line-height: 22px;
+}
+.cpt-p {
+	font-family: 'SamsungOne400';
+	font-size: 13px;
+	color: #505050;
+	line-height: 20px;
+}
+.oneui-ol {
+	padding-left: 23px;
+}
+.oneui-ol .oneui-li {
+	font-family: 'SamsungOneKorean-500';
+	font-size: 14px;
+	color: #666666;
+	line-height: 22px;
+	margin-bottom: 4px;
+}
+.oneui-ol .oneui-li:last-child {
+	margin-bottom: 0;
+}
+.oneui-ol.normal_size .oneui-li {
+	font-family: 'SamsungOneKorean-400';
+}
+.oneui-ol .numbering {
+	display: inline-block;	
+	margin-right:7px; margin-left:-23px;
+	color:#808080;
+}
+.oneui-ol.normal_size .oneui-li {
+	font-size: 18px;
+	line-height: 28px;
+}
+.oneui-ol.normal_size .numbering {
+	color: #666;
+	font-size: 16px;
+}
+.oneui-ol.title_size .oneui-li {
+	font-family: 'SamsungOneKorean-700';
+	font-size: 18px;
+	color: #363636;
+	line-height: 28px;
+}
+.oneui-ol.title_size .numbering {
+	font-family: 'SamsungOneKorean-700';
+	color: #363636;
+	font-size: 12px;
+	width: 18px;
+	height: 18px;
+	border: 1px solid #363636;
+	line-height: 17px;
+}
+.horizontal.oneui-ol .oneui-li {
+	display:inline-block; 
+	margin-right:45px;
+}
+.horizontal.oneui-ol .oneui-li:last-child {
+	margin-right:0;
+}
+
+
+/* 라인 시작 */
+.divider_line {
+	width:100%;
+	height:1px;
+	background-color: #D8D8D8;
+}
+.bordertop-1 {
+	border-top:1px solid #D8D8D8;
+}
+.borderbottom-1 {
+	border-bottom:1px solid #D8D8D8;
+}
+
+
+/** 테이블 **/
+table.zone_table {
+	width:100%;
+}
+table.zone_table th {
+	font-family: 'SamsungOneKorean-700';
+	font-size: 18px;
+	color: #252525;
+	letter-spacing: 0;
+	font-weight:700;
+	border-top:1px solid #8f8f8f; 
+	border-bottom:1px solid #8f8f8f;
+	padding:9px 10px 12px 20px;
+}
+table.zone_table th.th1 {width:25%;}
+table.zone_table th.th2 {width:32%;}
+table.zone_table th.th3 {width:43%;}
+
+table.zone_table td {
+	font-family: 'SamsungOneKorean-400';
+	font-size: 18px;
+	color: #666666;
+	line-height: 24px;
+	border-bottom:1px solid #8F8F8F;
+	padding:16px 10px 15px 20px;
+}
+table.zone_table th.pl0, table.zone_table td.pl0 {padding-left:0;}
+table.zone_table.sound_table th.th1 {width:25%;}
+table.zone_table.sound_table th.th2 {width:19%; padding-left:0;}
+table.zone_table.sound_table th.th3 {width:auto;}
+table.zone_table.sound_table img {width:32px; height:32px;}
+table.zone_table.sound_table tr td, table.zone_table.sound_table tr th {border-bottom:1px solid #e6e6e6;}
+table.zone_table.sound_table tr:first-child td, table.zone_table.sound_table tr:first-child th {border-bottom:1px solid #8f8f8f;}
+table.zone_table.sound_table tr td:last-child {padding-right:30px;}
+
+table.zone_table.reader_table th.th1, table.zone_table.reader_table td.th1 {width:120px;}
+table.zone_table.reader_table th.th2, table.zone_table.reader_table td.th2 {width:auto;}
+table.zone_table.reader_table img {width:22px; height:22px; margin-top:-2px;}
+table.zone_table.reader_table tr:first-child td {border-top:1px solid #8F8F8F; }
+table tr td.borderbottom-e6e6e6 {border-bottom: 1px solid #E6E6E6;}
+
+table.zone_table.reader_table.show_benefits tr td:first-child {vertical-align:top;}
+
+table.zone_table.action th.th1 {width:auto;}
+table.zone_table.action th.th2 {width:55%;}
+table.zone_table.action th.th3 {width:35%;}
+table.zone_table.action tr td, table.zone_table.action tr th {border-bottom:1px solid #e6e6e6;}
+table.zone_table.action tr:first-child td, table.zone_table.action tr:first-child th {border-bottom:1px solid #8f8f8f;}
+table.zone_table.action.color252525 th, table.zone_table.action.color252525 td {color:#252525;}
+
+.writing_table > li {/*color: #413F3F;*/}
+.writing_table > li.writing_table_ti {font-family: 'SamsungOneKorean-500'; font-size:20px;}
+.writing_table > li.writing_table_copy {font-size:16px; margin-top:8px;}
+
+.over_principle_wrap > div {border:1px solid #D8D8D8; border-radius:10px; margin-right:10px; margin-left:10px; width: calc(33.33% - 20px); text-align:center; height:108px; line-height:108px; cursor:pointer; margin-bottom:20px;}
+.over_principle_wrap > div > span {font-family: 'SamsungOneKorean-400'; font-size: 16px; color: #363636; display:inline-block; font-weight:600;
+opacity:1; -moz-transition:all .1s ease .1s; -o-transition:all .1s ease .1s; -ms-transition:all .1s ease .1s; -webkit-transition:all .1s ease .1s; transition:all .1s ease .1s;}
+.over_principle_wrap > div:hover > span {opacity:0.6}
+
+/* 네비게이션 */
+.navi_btn_wrap {margin-top:80px; padding-top:80px; border-top:1px solid #D8D8D8;}
+.navi_btn_wrap > ul:after {content:" "; display:block; clear:both; *zoom:1;}
+.navi_btn_wrap > ul > li {min-width:220px; border:1px solid #d8d8d8; border-radius:6px; height:59px; line-height:58px; position:relative;}
+.navi_btn_wrap > ul > li.left_btn_box {float:left; padding-left:63px; padding-right:20px; cursor:pointer;}
+.navi_btn_wrap > ul > li.right_btn_box {float:right; text-align:right; padding-right:63px; padding-left:20px; cursor:pointer;}
+.navi_btn_wrap > ul > li.left_btn_box > div > span::before {content: ''; background:url('../images/icon_page_prev.svg') no-repeat 50% 50%; width:27px; height:27px; background-size:100%; position:absolute; left:20px; top:15px;
+-moz-transition:all .1s ease .1s; -o-transition:all .1s ease .1s; -ms-transition:all .1s ease .1s; -webkit-transition:all .1s ease .1s; transition:all .1s ease .1s;}
+
+.navi_btn_wrap > ul > li.right_btn_box > div > span::after {content: ''; background:url('../images/icon_page_next.svg') no-repeat 50% 50%; width:27px; height:27px; background-size:100%; position:absolute; right:20px; top:15px;
+-moz-transition:all .1s ease .1s; -o-transition:all .1s ease .1s; -ms-transition:all .1s ease .1s; -webkit-transition:all .1s ease .1s; transition:all .1s ease .1s;}
+
+.navi_btn_wrap > ul > li > div > span {opacity:1; display:inline-block; width:100%; font-size:16px; font-family: 'SamsungOneKorean-500', sans-serif; color:#494848; font-weight: 500; line-height: 28px;
+-moz-transition:all .1s ease .1s; -o-transition:all .1s ease .1s; -ms-transition:all .1s ease .1s; -webkit-transition:all .1s ease .1s; transition:all .1s ease .1s;}
+.navi_btn_wrap > ul > li:hover > div > span {opacity:0.6}
+.navi_btn_wrap > ul > li:hover > div > span:before, .navi_btn_wrap > ul > li:hover > div > span:after {opacity:0.6}
+
+/* more 버튼 */
+ul > li.btn_more {margin-top:10px;}
+.btn_more {padding:17px 20px; width:auto; border:1px solid #d8d8d8; border-radius:10px; position:relative; display:inline-block; margin-right:15px; cursor:pointer;}
+.btn_more > div:after {content: ''; background:url('../images/icon_internal.svg') no-repeat 50% 50%; width:26px; height:26px; background-size:100%; position:absolute; right:16px; top:50%; margin-top:-13px;}
+.btn_more.target_blank > div:after {content: ''; background:url('../images/icon_external.svg') no-repeat 50% 50%; -moz-transition:all .1s ease .1s; -o-transition:all .1s ease .1s; -ms-transition:all .1s ease .1s; -webkit-transition:all .1s ease .1s; transition:all .1s ease .1s;}
+.btn_more:lasct-child {margin-right:0;}
+.btn_more > div {line-height: 32px; opacity:1; -moz-transition:all .1s ease .1s; -o-transition:all .1s ease .1s; -ms-transition:all .1s ease .1s; -webkit-transition:all .1s ease .1s; transition:all .1s ease .1s; display:inline-block; width:100%; padding-right:40px; color:#666;}
+.btn_more > div > p:first-child {margin-bottom:3px; font-size:17px; font-family: 'SamsungOneKorean-400', sans-serif; color:#666;  line-height: 26px;}
+.btn_more > div > p:last-child {color:#a3a3a3; font-family: SamsungOneKorean-500; font-size: 12px; line-height: 14px;}
+.btn_more:hover > div {opacity:0.6}
+.btn_more:hover > div:after {opacity:0.6} 
+
+@media (max-width: 767px) {
+	ul.accessibility > li.btn_more {min-width:240px;}
+	ul.abbpar > li.btn_more {min-width:272px;}
+}
+
+/** Color Chiip **/
+.color_mode_wrap {border-bottom:1px solid #e6e6e6;}
+.color_mode_ti {border-top:1px solid #8F8F8F; border-bottom:1px solid #8F8F8F;  font-family: 'SamsungOneKorean-700', sans-serif; font-size: 18px; color: #252525; padding:10px 20px;}
+.color_chip {width:130px; height:130px; display:inline-block; border-radius:70px; margin:30px 20px; position: relative;}
+.color_chip.light {background-color:#0072DE;}
+.color_chip.dark {background-color:#3e91ff;}
+.color_chip.primary_theme {background-color:#0381fe;}
+.color_chip.activated {background-color:#3e91ff;}
+.color_chip_hex {float:left; opacity: 1; font-family: 'SamsungOneKorean-400', sans-serif; font-size: 16px; color: #000000; position: absolute; top: 50%; margin-top: -10px; left: 185px;}
+
+/** 기타 **/
+.zone_display > span {display:inline-block; margin-right:20px;}
+.zone_display .grip::before {content: ''; width:16px; height:16px; background-color:#93EFFA; display: inline-block; margin-right:8px; margin-top: -4px; vertical-align: middle;}
+.zone_display .grip.reject::before {background-color:#FBA7E4; }
+ul.list_disc > li {position:relative; padding-left:15px; margin-bottom:4px;}
+ul.list_disc > li:last-child {margin-bottom:0;}
+ul.list_disc > li:before {content:""; position:absolute; left:0; top:12px; width:5px; height:5px; background:url('../images/list_disc_dot.png') no-repeat left top;  display:inline-block; }
+.highlight {
+	color: #3579F5;
+}
+
+/** mov **/
+#video_wrap {border-radius: 10px; overflow: hidden; position: relative;}
+#video_wrap video {width: 100%; display: block;}
+#video_playButton {opacity: 1;}
+.video_pause_button {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%; height: 100%;
+	margin-top:0; margin-left:0;
+	background: rgba(0,0,0,0.05) url('../images/icon_video_pause.svg') no-repeat 50% 50%;
+	background-size: 68px 68px;
+	opacity: 0;
+	transition: opacity 150ms;
+	z-index:97;
+}
+.video_playButton {
+	cursor: pointer;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%; height: 100%;
+	margin-top:0; margin-left:0;
+	background: rgba(0,0,0,0.05) url('../images/icon_video_play.svg') no-repeat 50% 50%;
+	background-size: 68px 68px;
+	opacity: 1;
+	transition: opacity 150ms;
+	z-index:99;
+}
+#video_wrap:hover > .video_pause_button {opacity: 1;}
+
+video:focus { outline:none !important; border:none !important; }
+
+#video_wrap.borderradius-101000 {border-radius: 10px 10px 0 0;}
+.borderradius-001010 {border-radius: 0 0 10px 10px;}
+
+.bottom_bar {height:26px; line-height:26px; padding:0 20px; font-size:15px; font-family: SamsungOneKorean-500; color:#fff;}
+.bottom_bar.do {background-color:#4290ff;}
+.bottom_bar.dont {background-color:#ff6a5c;}
+
+/* 여백 시작 */
+.mt-5 {	margin-top: 5px !important; }
+.mt-10 {	margin-top: 10px !important; }
+.mt-14 {	margin-top: 14px !important; }
+.mt-40 {	margin-top: 40px !important; }
+.mt-60 {	margin-top: 60px !important; }
+.mt-80 {	margin-top: 80px !important; }
+.mt-100 { margin-top: 100px !important;}
+
+.mb-5 { margin-bottom: 5px !important; }
+.mb-8 { margin-bottom: 8px !important; }
+.mb-15 { margin-bottom: 15px !important; }
+.mb-20 { margin-bottom: 20px !important; }
+.mb-25 { margin-bottom: 25px !important; }
+.mb-30 { margin-bottom: 30px !important; }
+.mb-40 { margin-bottom: 40px !important; }
+.mb-50 { margin-bottom: 50px !important; }
+.mb-60 { margin-bottom: 60px !important; }
+.mb-80 { margin-bottom: 80px !important; }
+.mb-100 { margin-bottom: 100px !important; }
+.mb-110 { margin-bottom: 110px !important; }
+.mb-120 { margin-bottom: 120px !important; }
+.mb-150 { margin-bottom: 150px !important; }
+
+.pt-10 { padding-top: 10px !important; }
+.pt-40 { padding-top: 40px !important; }
+.pt-60 { padding-top: 60px !important; }
+.pt-80 { padding-top: 80px !important; }
+.pt-100 { padding-top: 100px !important;}
+
+.pb-40 { padding-bottom: 40px !important; }
+.pb-15 { padding-bottom: 15px !important; }
+.pb-20 { padding-bottom: 20px !important; }
+.pb-25 { padding-bottom: 25px !important; }
+.pb-30 { padding-bottom: 30px !important; }
+.pb-60 { padding-bottom: 60px !important; }
+.pb-80 { padding-bottom: 80px !important; }
+.pb-100 { padding-bottom: 100px !important; }
+
+
+/** 토글 리스트 **/
+input { 
+    display :none; 
+} 
+.collapsible-content { 
+    max-height: 0; 
+    overflow: hidden;
+    transition: max-height .25s ease-in-out; 
+} 
+.toggle_test:checked + .lbl-toggle + .collapsible-content { 
+    max-height: 300px; 
+} 
+
+/** 반응형 **/
+@media (max-width: 767px) {
+	.col-3-3-3 {
+		margin-right:0; margin-left:0;
+	}
+	.col-3-3-3 > div, {
+		width:100%; padding-right:0; padding-left:0; padding-bottom:20px;
+	}
+	.col-3-3-3 > div:last-child {
+		padding-bottom:0;
+	}
+	.over_principle_wrap > div {width:calc(50% - 10px); padding-right:0; padding-left:0; padding-bottom:0px; margin:0 0 20px; height:108px; line-height:108px;}
+	.over_principle_wrap > div:last-child {margin-bottom:0;}
+
+	.over_principle_wrap > div:nth-child(odd) {margin-right:10px;}
+	.over_principle_wrap > div:nth-child(even) {margin-left:10px;}
+
+	.col-1-9 > div:first-child, .col-2-8 > div:first-child, .col-3-7 > div:first-child, .col-4-6 > div:first-child {
+		width: 100%; padding-right: 0px;
+	}
+	.col-1-9 > div:last-child, .col-2-8 > div:last-child, .col-3-7 > div:last-child, .col-4-6 > div:last-child {
+		width: 100%;
+	}
+	table.zone_table.sound_table th.th1, table.zone_table.sound_table th.th2, table.zone_table.sound_table th.th3 {width:33.3%;}
+	.navi_btn_wrap {margin-top:60px; padding-top:40px;}
+	.navi_btn_wrap > ul > li {width:calc(50% - 5px); min-width:auto; box-sizing:border-box; height: 84px; line-height: 84px;}
+	.navi_btn_wrap > ul > li a span {text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+	.navi_btn_wrap > ul > li.left_btn_box {margin-right:5px; padding-left: 57px; padding-right: 15px;}
+	.navi_btn_wrap > ul > li.right_btn_box {margin-left:5px; padding-right: 57px; padding-left: 15px; text-align: right; vertical-align:middle;}
+
+	.mb-80 { margin-bottom: 50px !important; }
+	.pb-80 { padding-bottom: 50px !important; }
+
+	.navi_btn_wrap > ul > li.left_btn_box > div > span::before {left:0; top: 50%; width: 26px; height: 26px; transform: translateY(-50%);}
+	.navi_btn_wrap > ul > li.right_btn_box > div > span::after {right:15px; top: 50%;width: 26px; height: 26px; transform: translateY(-50%);} 
+	.navi_btn_wrap > ul > li.left_btn_box > div {position:absolute; top:50%; left:15px; padding-left:42px; padding-right: 15px; transform: translateY(-50%); width:calc(100% - 15px);}
+	.navi_btn_wrap > ul > li.right_btn_box > div {position:absolute; top:50%; left:15px; padding-right: 57px; transform: translateY(-50%); width:calc(100% - 15px);}
+	.navi_btn_wrap > ul > li > div > span {font-size:14px; line-height: 21px; vertical-align: middle; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+
+	.pc-img {
+		display: none;
+	}
+	.col-5-5 > div {
+		width: 100%; padding-bottom:20px;
+	}
+	.col-5-5 > div:first-child {
+		padding-right: 0px;
+	}
+	.col-5-5 > div:last-child {
+		padding-left: 0px; padding-bottom:0px;
+	}
+	.col-5-5.col-240 > div:first-child, .col-5-5.col-240 > div:last-child {
+		width:100%; padding-right: 0px; padding-left: 0px; 
+	}
+	.btn_more {min-width:auto;}
+}
+/** max 767 **/
+
+@media (min-width: 768px) {
+	.mo-img {
+		display: none;
+	}
+	.btn_more {min-width:210px;}
+}
+/** min 768 **/

@@ -1,0 +1,11 @@
+input { 
+    display :none; 
+} 
+.collapsible-content { 
+    max-height: 0; 
+    overflow: hidden;
+    transition: max-height .25s ease-in-out; 
+} 
+.toggle_test:checked + .lbl-toggle + .collapsible-content { 
+    max-height: 400px; 
+} 

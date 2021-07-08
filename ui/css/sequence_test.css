@@ -1,0 +1,16 @@
+.parentBox {
+    position:relative;
+}
+
+#image-sequence01::-webkit-scrollbar {
+    display: none;
+}
+#image-sequence02::-webkit-scrollbar {
+    display: none;
+}
+#image-sequence03::-webkit-scrollbar {
+    display: none;
+}
+#image-sequence04::-webkit-scrollbar {
+    display: none;
+}
