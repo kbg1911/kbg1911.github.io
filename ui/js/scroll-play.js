@@ -1,8 +1,6 @@
-// 210708 버그수정 및 사파리 재대응.
-// 버그수정, 모든 뷰에서 뜨는거 잘잡아주기.
+// 210708 BugFix, DebugForSafari, add stickyOnly
 window.addEventListener('load', function () {
-    let isStickyPage;
-    const isDebug = true;
+    let isStickyPage = false;
 
     if (document.querySelector(".stickyContainer")) {
         isStickyPage = true;
@@ -12,7 +10,6 @@ window.addEventListener('load', function () {
         isStickyPage = false;
         // console.log("isNotStickyPage");
     }
-
     // console.log("loadOK");
 
 
@@ -23,15 +20,11 @@ window.addEventListener('load', function () {
         document.querySelector(".non-ie").style.display = 'none';
         document.querySelector(".ie").style.display = 'none';
         if (isIE) {
-            if (isDebug) {
-                // console.log("IE탐지");
-            }
+            // console.log("IE탐지");
             document.querySelector(".ie").style.display = 'block';
         }
         else {
-            if (isDebug) {
-                // console.log("IE아님");
-            }
+            // console.log("IE아님");
             document.querySelector(".non-ie").style.display = 'block';
         }
 
@@ -378,25 +371,24 @@ window.addEventListener('load', function () {
                 sectionB.style.backgroundPosition = uvPos[0];
             }
 
-            if (stickyContainer != null) {
-                window.addEventListener('resize', function () {
-                    resize();
-                    if (currentSpriteNum == 0) {
-                        sprites[0].style.backgroundPosition = uvPos[currentFrame];
-                    }
-                    else {
-                        for (let i = 0; i < sprites.length; i++) {
-                            if (currentSpriteNum < i) {
-                                sprites[i].style.backgroundPosition = uvPos[0];
-                            }
-                            else {
-                                sprites[i].style.backgroundPosition = uvPos[uvPos.length - 1]
-                            }
+            window.addEventListener('resize', function () {
+                resize();
+                // console.log("resize");
+                if (currentSpriteNum == 0) {
+                    sprites[0].style.backgroundPosition = uvPos[currentFrame];
+                }
+                else {
+                    for (let i = 0; i < sprites.length; i++) {
+                        if (currentSpriteNum < i) {
+                            sprites[i].style.backgroundPosition = uvPos[0];
                         }
-                        sprites[currentSpriteNum].style.backgroundPosition = uvPos[currentFrame];
+                        else {
+                            sprites[i].style.backgroundPosition = uvPos[uvPos.length - 1]
+                        }
                     }
-                });
-            }
+                    sprites[currentSpriteNum].style.backgroundPosition = uvPos[currentFrame];
+                }
+            });
 
             function resize() {
                 let width = sprites[0].getBoundingClientRect().width;
@@ -409,5 +401,4 @@ window.addEventListener('load', function () {
             }
         }
     }
-
 });
