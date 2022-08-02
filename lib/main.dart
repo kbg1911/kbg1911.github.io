@@ -15,7 +15,9 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Title"),
         ),
-        body: Text("body"),
+        body: Container(
+          child: ItemProduct(),
+        ),
         bottomNavigationBar: Container(
           height: 50,
           child: BottomAppBar(
@@ -40,6 +42,8 @@ class ItemProduct extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Text("ItemProduct"),
+    );
   }
 }
