@@ -14,11 +14,36 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+
         appBar: AppBar(
           title: const Text("Title"),
+          actions: [
+            IconButton(onPressed: onClickNone, icon: Icon(Icons.search)),
+            IconButton(onPressed: onClickNone, icon: Icon(Icons.menu)),
+
+          ],
         ),
         body: Container(
-          child: ItemProductStful(),
+          width: double.infinity,
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                ItemProductStful(),
+                ItemProductStful(),
+                ItemProductStful(),
+                ItemProductStful(),
+                ItemProductStful(),
+                ItemProductStful(),
+                ItemProductStful(),
+                ItemProductStful(),
+                ItemProductStful(),
+                ItemProductStful(),
+                ItemProductStful(),
+                ItemProductStful(),
+              ],
+            ),
+          ),
         ),
         bottomNavigationBar: Container(
           height: 50,
@@ -27,7 +52,7 @@ class MyApp extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 IconButton(onPressed: onClickNone, icon: Icon(Icons.home)),
-                IconButton(onPressed: onClickNone, icon: Icon(Icons.favorite)),
+                IconButton(onPressed: onClickNone, icon: Icon(Icons.search)),
                 IconButton(onPressed: onClickNone, icon: Icon(Icons.menu)),
               ],
             ),
@@ -56,7 +81,8 @@ class _ItemProductStfulState extends State<ItemProductStful> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 200,
+      width: double.infinity,
+      height: 100,
       child: Row(
         children: [
           IconButton(onPressed: onClickNone1, icon: const Icon(Icons.plus_one)),
