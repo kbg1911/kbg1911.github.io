@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,10 +15,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Title"),
+          title: const Text("Title"),
         ),
         body: Container(
-          child: ItemProduct(),
+          child: ItemProductStful(),
         ),
         bottomNavigationBar: Container(
           height: 50,
@@ -24,9 +26,9 @@ class MyApp extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Icon(Icons.home),
-                Icon(Icons.favorite),
-                Icon(Icons.menu),
+                IconButton(onPressed: onClickNone, icon: Icon(Icons.home)),
+                IconButton(onPressed: onClickNone, icon: Icon(Icons.favorite)),
+                IconButton(onPressed: onClickNone, icon: Icon(Icons.menu)),
               ],
             ),
             color: Color(0xff999999),
@@ -37,13 +39,42 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class ItemProduct extends StatelessWidget {
-  const ItemProduct({Key? key}) : super(key: key);
+void onClickNone() {
+  print("onClickNone");
+}
+
+class ItemProductStful extends StatefulWidget {
+  const ItemProductStful({Key? key}) : super(key: key);
+
+  @override
+  State<ItemProductStful> createState() => _ItemProductStfulState();
+}
+
+class _ItemProductStfulState extends State<ItemProductStful> {
+  var textLabel2 = 100;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("ItemProduct"),
+      width: 200,
+      child: Row(
+        children: [
+          IconButton(onPressed: onClickNone1, icon: const Icon(Icons.plus_one)),
+          IconButton(onPressed: onClickNone2, icon: const Icon(Icons.exposure_minus_1)),
+          Text(textLabel2.toString()),
+        ],
+      ),
     );
+  }
+
+  void onClickNone1() {
+    setState(() {
+      textLabel2++;
+    });
+  }
+  void onClickNone2() {
+    setState(() {
+      textLabel2--;
+    });
   }
 }
