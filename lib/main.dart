@@ -12,12 +12,34 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(),
-        body: Text("asdf"),
-        bottomNavigationBar: BottomAppBar(
-          color: Color(0xffffff00),
+        appBar: AppBar(
+          title: Text("Title"),
+        ),
+        body: Text("body"),
+        bottomNavigationBar: Container(
+          height: 50,
+          child: BottomAppBar(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Icon(Icons.home),
+                Icon(Icons.favorite),
+                Icon(Icons.menu),
+              ],
+            ),
+            color: Color(0xff999999),
+          ),
         ),
       )
     );
+  }
+}
+
+class ItemProduct extends StatelessWidget {
+  const ItemProduct({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
