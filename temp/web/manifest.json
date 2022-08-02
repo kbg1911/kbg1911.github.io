@@ -1,11 +1,11 @@
 {
-    "name": "gitpage",
-    "short_name": "gitpage",
+    "name": "simple_appt",
+    "short_name": "simple_appt",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "flluter base",
+    "description": "A new Flutter project.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
