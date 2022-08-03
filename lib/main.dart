@@ -3,7 +3,10 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( MaterialApp(
+    title: 'basicApp',
+    home:  MyApp()),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -12,62 +15,88 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-
-        appBar: AppBar(
-          title: const Text("Title"),
-          actions: [
-            IconButton(onPressed: onClickNone, icon: Icon(Icons.search)),
-            IconButton(onPressed: onClickNone, icon: Icon(Icons.menu)),
-
-          ],
-        ),
-        body: Container(
-          width: double.infinity,
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                ItemProductStful(),
-                ItemProductStful(),
-                ItemProductStful(),
-                ItemProductStful(),
-                ItemProductStful(),
-                ItemProductStful(),
-                ItemProductStful(),
-                ItemProductStful(),
-                ItemProductStful(),
-                ItemProductStful(),
-                ItemProductStful(),
-                ItemProductStful(),
-              ],
-            ),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Title"),
+        actions: [
+          IconButton(onPressed: () {
+            print("search");
+          }, icon: Icon(Icons.search)),
+          IconButton(onPressed: () {
+            print("menu");
+          }, icon: Icon(Icons.menu)),
+        ],
+      ),
+      body: Container(
+        width: double.infinity,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              ItemProductStful(),
+              ItemProductStful(),
+              ItemProductStful(),
+              ItemProductStful(),
+              ItemProductStful(),
+              ItemProductStful(),
+              ItemProductStful(),
+              ItemProductStful(),
+              ItemProductStful(),
+              ItemProductStful(),
+              ItemProductStful(),
+              ItemProductStful(),
+            ],
           ),
         ),
-        bottomNavigationBar: Container(
-          height: 50,
-          child: BottomAppBar(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                IconButton(onPressed: onClickNone, icon: Icon(Icons.home)),
-                IconButton(onPressed: onClickNone, icon: Icon(Icons.search)),
-                IconButton(onPressed: onClickNone, icon: Icon(Icons.menu)),
-              ],
-            ),
-            color: Color(0xff999999),
+      ),
+      bottomNavigationBar: Container(
+        height: 50,
+        child: BottomAppBar(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              IconButton(onPressed: () {
+                print("home");
+              }, icon: Icon(Icons.home)),
+              IconButton(onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyApp2()),
+                );
+              }, icon: Icon(Icons.search)),
+              IconButton(onPressed: () {
+                print("menu");
+              }, icon: Icon(Icons.menu)),
+            ],
           ),
+          color: Color(0xff999999),
         ),
-      )
+      ),
     );
   }
 }
 
-void onClickNone() {
-  print("onClickNone");
-}
+class MyApp2 extends StatelessWidget {
+  const MyApp2({Key? key}) : super(key: key);
 
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Second Route"),
+      ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('Go back!'),
+        ),
+      ),
+    );
+  }
+}
 class ItemProductStful extends StatefulWidget {
   const ItemProductStful({Key? key}) : super(key: key);
 
@@ -76,7 +105,7 @@ class ItemProductStful extends StatefulWidget {
 }
 
 class _ItemProductStfulState extends State<ItemProductStful> {
-  var textLabel2 = 100;
+  var textLabel2 = 5;
 
   @override
   Widget build(BuildContext context) {
@@ -95,12 +124,18 @@ class _ItemProductStfulState extends State<ItemProductStful> {
 
   void onClickNone1() {
     setState(() {
-      textLabel2++;
+      if(textLabel2 < 99) {
+        textLabel2++;
+      }
+
     });
   }
   void onClickNone2() {
     setState(() {
-      textLabel2--;
+      if(textLabel2 > 0) {
+        textLabel2--;
+      }
+
     });
   }
 }
