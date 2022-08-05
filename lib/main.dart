@@ -1,9 +1,11 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'search.dart';
+import 'bbs.dart';
 
 void main() {
-  runApp( MaterialApp(
+  runApp( const MaterialApp(
     title: 'basicApp',
     home:  MyApp()),
   );
@@ -12,7 +14,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,95 +22,67 @@ class MyApp extends StatelessWidget {
         actions: [
           IconButton(onPressed: () {
             print("search");
-          }, icon: Icon(Icons.search)),
+          }, icon: const Icon(Icons.search)),
           IconButton(onPressed: () {
             print("menu");
-          }, icon: Icon(Icons.menu)),
+          }, icon: const Icon(Icons.menu)),
         ],
       ),
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         child: SingleChildScrollView(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              ItemProductStful(),
-              ItemProductStful(),
-              ItemProductStful(),
-              ItemProductStful(),
-              ItemProductStful(),
-              ItemProductStful(),
-              ItemProductStful(),
-              ItemProductStful(),
-              ItemProductStful(),
-              ItemProductStful(),
-              ItemProductStful(),
-              ItemProductStful(),
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: const [
+              ItemProductStateful(),
+              Bbs(),
+              Bbs(),
             ],
           ),
         ),
       ),
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 50,
         child: BottomAppBar(
+          color: const Color(0xff999999),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               IconButton(onPressed: () {
                 print("home");
-              }, icon: Icon(Icons.home)),
+              }, icon: const Icon(Icons.home)),
               IconButton(onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MyApp2()),
+                  MaterialPageRoute(builder: (context) => Search()),
                 );
-              }, icon: Icon(Icons.search)),
+              }, icon: const Icon(Icons.search)),
               IconButton(onPressed: () {
                 print("menu");
-              }, icon: Icon(Icons.menu)),
+              }, icon: const Icon(Icons.menu)),
             ],
           ),
-          color: Color(0xff999999),
         ),
       ),
     );
   }
 }
 
-class MyApp2 extends StatelessWidget {
-  const MyApp2({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Second Route"),
-      ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
-        ),
-      ),
-    );
-  }
-}
-class ItemProductStful extends StatefulWidget {
-  const ItemProductStful({Key? key}) : super(key: key);
+
+class ItemProductStateful extends StatefulWidget {
+  const ItemProductStateful({Key? key}) : super(key: key);
 
   @override
-  State<ItemProductStful> createState() => _ItemProductStfulState();
+  State<ItemProductStateful> createState() => _ItemProductStatefulState();
 }
 
-class _ItemProductStfulState extends State<ItemProductStful> {
+class _ItemProductStatefulState extends State<ItemProductStateful> {
   var textLabel2 = 5;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: 100,
       child: Row(
