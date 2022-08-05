@@ -33,10 +33,13 @@ class MyApp extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: const [
+            children: [
               ItemProductStateful(),
-              Bbs(),
-              Bbs(),
+              Bbs(title: 'title1', content: 'hi', writer: 'me',),
+              Bbs(title: 'title2', content: 'hi', writer: 'me',),
+              Bbs(title: 'title3', content: 'hi', writer: 'me',),
+              Bbs(title: 'title4', content: 'hi', writer: 'me',),
+              Bbs(title: '한글은', content: '잘되나?', writer: '나',),
             ],
           ),
         ),
