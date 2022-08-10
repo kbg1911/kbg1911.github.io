@@ -40,26 +40,26 @@ class Bbs extends StatelessWidget {
                 children: [
                   Container (
                     decoration: BoxDecoration(border: Border.all(width: 2, color: Colors.black)),
-                    height: 30,
+                    height: 35,
                     padding: EdgeInsets.all(5),
                     alignment: Alignment.centerLeft,
 
-                    child: SelectableText(title),
+                    child: Text(title),
                   ),
                   Expanded (
                       child: Container (
                         decoration: BoxDecoration(border: Border.all(width: 2, color: Colors.black)),
                         padding: EdgeInsets.all(5),
                         alignment: Alignment.topLeft,
-                        child: SelectableText(content),
+                        child: Text(content),
                       )
                   ),
 
                   Container (
                     height: 20,
-                    alignment: Alignment.topRight,
+                    alignment: Alignment.centerRight,
                     color: Colors.yellow,
-                    child: SelectableText(writer),
+                    child: Text(writer),
 
                   ),
                 ],

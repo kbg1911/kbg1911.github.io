@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'search.dart';
 import 'bbs.dart';
@@ -7,14 +5,19 @@ import 'write.dart';
 
 import 'class/common.dart';
 
-Bbs_Data a = new Bbs_Data();
+List itemList = <Bbs_Data>[];
 
 void main() {
-  a.setData('title', 'content', 'writer');
+  itemList.add(Bbs_Data('title','content','writer'));
+  itemList.add(Bbs_Data('제목','내용','글쓴이'));
+  itemList.add(Bbs_Data('냉장고','한번만씀','강님'));
+  itemList.add(Bbs_Data('맥북','공짜로드림','백님'));
+  itemList.add(Bbs_Data('고양이','꾹꾹이','윤님'));
 
   runApp(
     const MaterialApp(title: 'basicApp', home: MyApp()),
   );
+
 }
 
 class MyApp extends StatelessWidget {
@@ -44,44 +47,11 @@ class MyApp extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                ItemProductStateful(),
-                Bbs(title: a.title, content: a.content, writer: a.writer),
-                Divider(
-                  height: 10,
-                  color: Colors.blue,
-                ),
-                Bbs(
-                  title: '세탁기',
-                  content: '모터 수리 완료된 세탁기',
-                  writer: 'me',
-                ),
-                Divider(
-                  height: 10,
-                  color: Colors.blue,
-                ),
-                Bbs(
-                  title: '전자렌지',
-                  content: '하루밖에 안쓴 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세',
-                  writer: 'me',
-                ),
-                Divider(
-                  height: 10,
-                  color: Colors.blue,
-                ),
-                Bbs(
-                  title: '김치냉장고',
-                  content: '냉장기능 사용 가능',
-                  writer: 'me',
-                ),
-                Divider(
-                  height: 10,
-                  color: Colors.blue,
-                ),
-                Bbs(
-                  title: 'TV',
-                  content: '65인치 QLED',
-                  writer: '나',
-                ),
+                for(int i = 0; i < itemList.length; i++)...[
+                  Bbs(title: itemList[i].title, content: itemList[i].content, writer: itemList[i].writer),
+                  if( i != itemList.length-1) const Divider( height: 10, thickness: 1, color: Colors.blue),
+                ],
+                const ItemProductStateful(),
               ],
             ),
           ),
