@@ -20,7 +20,7 @@ class Bbs extends StatelessWidget {
       decoration: BoxDecoration(border: Border.all(width: 1, color: Colors.red)),
       width: double.infinity,
       height: 150,
-      child: FlatButton (
+      child: TextButton (
         child: Row(
           children: [
             Flexible(
@@ -60,14 +60,16 @@ class Bbs extends StatelessWidget {
                     alignment: Alignment.topRight,
                     color: Colors.yellow,
                     child: SelectableText(writer),
+
                   ),
                 ],
               ),
             ),
           ],
-        ), onPressed: () {  
+        ),
+        onPressed: () {
           print("Click"+title);
-      },
+        },
       )
 
 

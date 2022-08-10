@@ -46,20 +46,36 @@ class MyApp extends StatelessWidget {
               children: [
                 ItemProductStateful(),
                 Bbs(title: a.title, content: a.content, writer: a.writer),
+                Divider(
+                  height: 10,
+                  color: Colors.blue,
+                ),
                 Bbs(
                   title: '세탁기',
                   content: '모터 수리 완료된 세탁기',
                   writer: 'me',
+                ),
+                Divider(
+                  height: 10,
+                  color: Colors.blue,
                 ),
                 Bbs(
                   title: '전자렌지',
                   content: '하루밖에 안쓴 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세',
                   writer: 'me',
                 ),
+                Divider(
+                  height: 10,
+                  color: Colors.blue,
+                ),
                 Bbs(
                   title: '김치냉장고',
                   content: '냉장기능 사용 가능',
                   writer: 'me',
+                ),
+                Divider(
+                  height: 10,
+                  color: Colors.blue,
                 ),
                 Bbs(
                   title: 'TV',
