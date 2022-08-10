@@ -44,14 +44,14 @@ class Bbs extends StatelessWidget {
                     padding: EdgeInsets.all(5),
                     alignment: Alignment.centerLeft,
 
-                    child: Text(title),
+                    child: SelectableText(title),
                   ),
                   Expanded (
                       child: Container (
                         decoration: BoxDecoration(border: Border.all(width: 2, color: Colors.black)),
                         padding: EdgeInsets.all(5),
                         alignment: Alignment.topLeft,
-                        child: Text(content),
+                        child: SelectableText(content),
                       )
                   ),
 
@@ -59,7 +59,7 @@ class Bbs extends StatelessWidget {
                     height: 20,
                     alignment: Alignment.topRight,
                     color: Colors.yellow,
-                    child: Text(writer),
+                    child: SelectableText(writer),
                   ),
                 ],
               ),
