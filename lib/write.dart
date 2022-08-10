@@ -14,7 +14,7 @@ class Write extends StatelessWidget {
           children: [
             Container(
               height: 300,
-              child: Center(child: Text('writeSomethings..')),
+              child: Center(child: SelectableText('writeSomethings..')),
             ),
             Container(
               child: TextButton (
