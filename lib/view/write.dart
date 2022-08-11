@@ -9,55 +9,51 @@ class Write extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Write"),
       ),
-      body: Container(
+      body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
-              height: 300,
-              child: Container(
-                child: Column(
-                  children: [
-                    Container(
-                      child: TextField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: '제목',
-                        ),
-                      ),
-                    ),
-                    Divider(
-                      height: 30,
-                    ),
-                    Expanded(
-                      flex: 1,
-                      child: TextField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: '내용공간',
-                        ),
-                      ),
-                    ),
-                  ],
+              height: 30,
+            ),
+            Container(
+              child: TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: '제목',
                 ),
               ),
             ),
+            Divider(
+              height: 30,
+            ),
             Container(
-              child: TextButton (
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: const Text('Go back!!!!'),
-              )
+              child: TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: '내용공간',
+                ),
+              ),
             ),
           ],
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        child: TextButton (
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('Go back!!!!'),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            TextButton (
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text('ADD'),
+            ),
+            TextButton (
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text('Go back!!!!'),
+            ),
+          ],
         )
       ),
     );

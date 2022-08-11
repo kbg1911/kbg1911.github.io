@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gitpage/view/item_detail.dart';
 
 class Bbs extends StatelessWidget {
   var title ;
@@ -21,13 +22,13 @@ class Bbs extends StatelessWidget {
       child: TextButton (
         child: Row(
           children: [
-            Flexible(
+            Flexible( // 이미지 표시영역
                 fit: FlexFit.tight,
                 flex: 3,
                 child: Container (
-                  decoration: BoxDecoration(border: Border.all(width: 1, color: Colors.black)),
-
-                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(border: Border.all(width: 1, color: Colors.black),color: Colors.yellow),
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.all(5),
                   child: const Image(image: AssetImage('assets/images/product.jpg')),
                 )
             ),
@@ -37,7 +38,7 @@ class Bbs extends StatelessWidget {
               child: Column(
                 children: [
                   Container (
-                    decoration: BoxDecoration(border: Border.all(width: 2, color: Colors.black)),
+                    decoration: BoxDecoration(border: Border.all(width: 1, color: Colors.black)),
                     height: 35,
                     padding: const EdgeInsets.all(5),
                     alignment: Alignment.centerLeft,
@@ -46,7 +47,7 @@ class Bbs extends StatelessWidget {
                   ),
                   Expanded (
                       child: Container (
-                        decoration: BoxDecoration(border: Border.all(width: 2, color: Colors.black)),
+                        decoration: BoxDecoration(border: Border.all(width: 1, color: Colors.black)),
                         padding: EdgeInsets.all(5),
                         alignment: Alignment.topLeft,
                         child: Text(content),
@@ -55,8 +56,8 @@ class Bbs extends StatelessWidget {
 
                   Container (
                     height: 20,
+                    decoration: BoxDecoration(border: Border.all(width: 1, color: Colors.black)),
                     alignment: Alignment.centerRight,
-                    color: Colors.yellow,
                     child: Text(writer),
 
                   ),
@@ -66,7 +67,11 @@ class Bbs extends StatelessWidget {
           ],
         ),
         onPressed: () {
-          print("Click"+title);
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => ItemDetail(
+              title: title, content: content, writer: writer
+              ))
+          );
         },
       )
 
