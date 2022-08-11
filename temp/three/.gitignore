@@ -13,7 +13,7 @@ npm-debug.log
 # - ignore all files in the test folder
 # - unignore all files in subdirectories of the test folder
 # - unignore all files with an extension in the test folder
-test/*
+test/e2e
 !test/*/
 !test/*.*
 test/*.cmd
