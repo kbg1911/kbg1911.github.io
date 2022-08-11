@@ -29,6 +29,7 @@ class Write extends StatelessWidget {
                       height: 30,
                     ),
                     Expanded(
+                      flex: 1,
                       child: TextField(
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
