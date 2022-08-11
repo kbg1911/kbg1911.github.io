@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 class Bbs extends StatelessWidget {
@@ -30,7 +28,7 @@ class Bbs extends StatelessWidget {
                   decoration: BoxDecoration(border: Border.all(width: 1, color: Colors.black)),
 
                   padding: const EdgeInsets.all(10),
-                  child: const Image(image: AssetImage('Images/product.jpg')),
+                  child: const Image(image: AssetImage('assets/images/product.jpg')),
                 )
             ),
             Flexible(

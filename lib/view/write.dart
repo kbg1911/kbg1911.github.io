@@ -14,7 +14,31 @@ class Write extends StatelessWidget {
           children: [
             Container(
               height: 300,
-              child: Center(child: SelectableText('writeSomethings..')),
+              child: Container(
+                child: Column(
+                  children: [
+                    Container(
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: '제목',
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      height: 30,
+                    ),
+                    Expanded(
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: '내용공간',
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
             Container(
               child: TextButton (
