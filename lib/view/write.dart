@@ -16,18 +16,21 @@ class Write extends StatelessWidget {
               height: 30,
             ),
             Container(
-              child: TextField(
+              child: const TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: '제목',
                 ),
               ),
             ),
-            Divider(
+            const Divider(
               height: 30,
             ),
             Container(
-              child: TextField(
+              child: const TextField(
+                keyboardType: TextInputType.multiline,
+                minLines: 10,
+                maxLines: 10,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: '내용공간',
@@ -43,6 +46,7 @@ class Write extends StatelessWidget {
           children: [
             TextButton (
               onPressed: () {
+                print("Save");
                 Navigator.pop(context);
               },
               child: const Text('ADD'),

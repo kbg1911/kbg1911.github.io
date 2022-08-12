@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gitpage/view/write_item.dart';
 import 'class/ItemProductStatefulState.dart';
 import 'view/search.dart';
 import 'widgets/bbs.dart';
@@ -92,7 +93,7 @@ class MyApp extends StatelessWidget {
             child: const Icon(Icons.add),
             onPressed: () => {
               Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Write())
+                context, MaterialPageRoute(builder: (context) => WriteItem())
               )
             }
         )
