@@ -9,14 +9,14 @@ class Search extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Second Route"),
       ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('Go back!'),
-        ),
-      ),
+      // body: Center(
+      //   child: RaisedButton(
+      //     onPressed: () {
+      //       Navigator.pop(context);
+      //     },
+      //     child: const Text('Go back!'),
+      //   ),
+      // ),
     );
   }
 }

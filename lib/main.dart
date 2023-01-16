@@ -13,7 +13,6 @@ void main() {
   itemList.add(Bbs_Data('냉장고','한번만씀','강님'));
   itemList.add(Bbs_Data('맥북','공짜로드림','백님'));
   itemList.add(Bbs_Data('고양이','꾹꾹이','윤님'));
-  itemList.add(Bbs_Data('건강이최고','건강 잘 챙기세요','국님'));
   itemList.add(Bbs_Data('기타','등등','강님'));
   itemList.add(Bbs_Data('기타','등등','강님'));
   itemList.add(Bbs_Data('기타','등등','강님'));
