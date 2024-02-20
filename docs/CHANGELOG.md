@@ -14,7 +14,7 @@ All notable changes to this project will be documented in this file. See [standa
 * correct the Twitter Card in social share preview ([#1498](https://github.com/cotes2020/jekyll-theme-chirpy/issues/1498)) ([74f1662](https://github.com/cotes2020/jekyll-theme-chirpy/commit/74f16623c9c4877ef36ac52e8b69c19d1d9a82ba))
 * missing "/" at the end of URLs for categories and tags in breadcrumb ([#1495](https://github.com/cotes2020/jekyll-theme-chirpy/issues/1495)) ([02e296e](https://github.com/cotes2020/jekyll-theme-chirpy/commit/02e296ed75b7906b2d112c67f9054f5d71919de9))
 
-### Improvements
+### Improvements 
 
 * allow no social links to be configured ([#1494](https://github.com/cotes2020/jekyll-theme-chirpy/issues/1494)) ([4facf5b](https://github.com/cotes2020/jekyll-theme-chirpy/commit/4facf5b390eeba612ca439f3354c5d2d881aac56))
 * allow TOC to start at heading 3 ([#1512](https://github.com/cotes2020/jekyll-theme-chirpy/issues/1512)) ([bbbb66b](https://github.com/cotes2020/jekyll-theme-chirpy/commit/bbbb66b489a3bf2b878947336fe894e8ea2ae3f5))
